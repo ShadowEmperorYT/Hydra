@@ -21,7 +21,8 @@ def assistant():
     mail = ['sent a mail','open mail','open gmail','sent a gamil']
     music = ['play a song','play music','play song','play']
     time = ['what time is it now','time','tell me the time','what is the time']
-    hep = ['?'] 
+    hep = ['?']
+    
     #COMMANDS <END>
 
 
@@ -41,13 +42,19 @@ def assistant():
         
     elif qus in yt:
         webbrowser.open("https://www.youtube.com")
+        engine.say("Opening youtube")
+        engine.runAndWait()
 
     elif qus in mail:
         webbrowser.open("https://www.mail.google.com")
+        engine.say("Opening gmail")
+        engine.runAndWait()
 
     elif qus in music:
 
          webbrowser.open("https://www.spotify.com")
+         engine.say("Opening spotify")
+         engine.runAndWait()
 
     elif qus in time:
         current_time = datetime.datetime.now() 
@@ -67,6 +74,10 @@ def assistant():
          print ("type 'what time is it now' to know the time")
          print ("type 'sent a mail' to open gmail")
          print ("type '?' to show the list of commands")
+
+
+    else:
+        print("Invalid command type '?' for help")
     assistant()
 
 assistant()
