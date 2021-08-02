@@ -77,7 +77,7 @@ def assistant():
 
 
     else:
-        print("Invalid command type '?' for help")
+        print("Invalid command type '?' for help or check you network connection")
     assistant()
 
 assistant()
